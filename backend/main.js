@@ -1,7 +1,8 @@
-const power  = require('./app')
-const os = require('os')
+function power(a,b){
+    let wynik = 1
+    for (let i = 0; i < b; i++)
+    wynik*=a
+    return  wynik;
+}
 
-let a = power(3, 3)
-
-console.log(a)
-console.log(os.freemem())
+module.exports = power;
