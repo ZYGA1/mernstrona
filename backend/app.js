@@ -2,14 +2,30 @@ const http = require('http')
 const path = require('path')
 const fs = require('fs')
 const express = require('express')
-const app = express();
 const { listenerCount } = require('process')
 const ejs = require('ejs')
 
 
+
+
+const app = express();
+
+
+
+
 app.listen('9000', () => {
-    console.log('nigger')
 })
+
+
+
+app.use((req,res, next) => {
+    console.log('New Request')
+    console.log('host: ', req.hostname)
+    console.log('path: ', req.path)
+    console.log('method', req.method)
+    next();
+})
+
 
 app.set('views' , __dirname + '/strony')
 
