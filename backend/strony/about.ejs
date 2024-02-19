@@ -6,9 +6,15 @@
     <title><%= nazwa %></title>
 </head>
 <body>
-    <h1>about</h1>
-    <a href="/">index</a>
-    <a href="/about">about</a>
-    <a href="/404">404</a>
+    <div style="display: flex; justify-content: center;">
+    <div style="width: 340px; border: 3px solid grey; border-radius: 10px;" >
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/main.ejs') %>
+    <%- include('./partials/data.ejs')  %>
+    <%- include('./partials/footer.ejs') %>
+    </div>
+    </div>
+
+
 </body>
 </html>
